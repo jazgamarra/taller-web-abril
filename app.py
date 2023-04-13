@@ -11,15 +11,14 @@ def ejemplo ():
     return 'Hola mundo desde penguin' 
 
 @app.route('/render_template')
-def render_template (): 
+def render_template_ejemplo (): 
     return render_template('ejemplo1.html')
 
 @app.route('/enviar_datos')
 def enviar_datos():
-    nombre = "Esteban"
+    nombre = "Jazmin"
     edad = 20
-    return render_template("enviar_datos.html")
-
+    return render_template("enviar_datos.html", nombre=nombre, edad=edad)
 
 # Configuramos para correr con el boton de play
 if __name__ == '__main__': 
